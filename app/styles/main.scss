@@ -2,8 +2,17 @@
 // endbower
 
 body {
-    background: #fafafa;
+    background: #660000;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
+.thumbnail {
+    display: inline-block;
+}
+
+.thumbnail img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}

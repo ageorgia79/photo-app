@@ -6,5 +6,7 @@ var Photo = Backbone.Model.extend({
 
 var PhotoCollection = Backbone.Collection.extend({
   model: Photo,
-  url: "http://tiny-pizza-server.herokuapp.com/collections/georgia-images"
-})
+  url: "http://tiny-pizza-server.herokuapp.com/collections/photos",
+
+
+});

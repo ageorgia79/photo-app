@@ -2,7 +2,7 @@
 // endbower
 
 body {
-    background: #660000;
+    background: #FFFF99;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -15,4 +15,65 @@ body {
     width: 200px;
     height: 200px;
     padding: 10px;
+    border: 2px solid black;
+}
+
+.detail {
+	display: inline-block;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1000px;
+	height: 1000px;
+
+}
+
+input {
+	display: inline-block;
+	padding: 10px;
+	background-color: gray;
+	margin: 15px 0 0px 10px;
+	width: 300px;
+}
+
+.urlInput {
+	display: inline-block;
+	background-color: gray;
+	margin: 0px 0 10px 10px;
+	width: 350px;
+
+}
+
+.commentSubmitButton {
+	display: inline-block;
+	margin-top: 15px;
+	float: right;
+	background-color: gray;
+	width: 100px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	left: 10px;
+	bottom: 55px;
+}
+
+.urlSubmitButton {
+	display: inline-block;
+	float: right;
+	background-color: gray;
+	width: 100px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	left: 10px;
+	bottom: 49px;
 }

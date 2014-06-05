@@ -21,11 +21,36 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="container"></div>
+        <div class="container">
+            <div class="thumbnailContainer">
+            </div>
+            <div class="editContainer">
+            </div>
+        </div>
 
         
         <script type="text/template" class="thumbnail-template">
-            <img src="<%= url %>">
+            <img src="<%= url %>" width="200" height="200"/>
+        </script>
+
+        <script type="text/template" class="detail-template">
+            <img src="<%= url %>" width="500" height="500"/>
+            <BR>
+            <div class="comment-box-field">
+                <label for="text2">Comments:
+                    <input value="<%= comments %>" class="input" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                </label>
+                <div class="commentSubmitButton">Submit
+                    </div>
+            </div>
+            <BR>
+            <div class="comment-box-field">
+                <label for="text2">URL:
+                    <input value="<%= url %>" class="urlInput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                </label>
+                <div class="urlSubmitButton">Submit
+                    </div>
+            </div>
         </script>
 
         <!-- build:js scripts/vendor.js -->

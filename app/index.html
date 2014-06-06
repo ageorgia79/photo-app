@@ -20,13 +20,15 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <div class="header">Andy's Image Gallery</div>
         <div class="container">
-            <div class="thumbnailContainer">
+            <div class="galleryContainer">
             </div>
-            <div class="editContainer">
+            <div class="selectedContainer">
             </div>
         </div>
+                
+
 
         
         <script type="text/template" class="thumbnail-template">
@@ -37,14 +39,14 @@
             <img src="<%= url %>" width="500" height="500"/>
             <BR>
             <div class="comment-box-field">
-                <label for="text2">Caption:
-                    <input value="<%= comments %>" class="input" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                <label for="text2">
+                    <input value="<%= comments %>" class="captioninput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
                 </label>
                 
             </div>
             <BR>
             <div class="comment-box-field">
-                <label for="text2">URL:
+                <label for="text2">
                     <input value="<%= url %>" class="urlInput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
                 </label>
                

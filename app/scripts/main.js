@@ -28,7 +28,7 @@ var ThumbnailView = Backbone.View.extend({
     },
  
     initialize: function(){
-        $('.thumbnailContainer').append(this.el);
+        $('.galleryContainer').append(this.el);
         this.render();
     },
  
@@ -42,7 +42,7 @@ var ThumbnailView = Backbone.View.extend({
  
     showDetailView: function(){
         var detail = new DetailView({model: this.model});
-          $('.thumbnailContainer').remove();
+          $('.galleryContainer').remove();
           detail.render()
     } 
 
@@ -56,7 +56,7 @@ var DetailView = Backbone.View.extend({
     detailTemplate: _.template($('.detail-template').text()),
  
     initialize: function(){
-        $('.editContainer').append(this.el);
+        $('.selectedContainer').append(this.el);
         this.render();
     },
  

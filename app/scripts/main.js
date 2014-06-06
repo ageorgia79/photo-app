@@ -36,6 +36,7 @@ var ThumbnailView = Backbone.View.extend({
       if (this.model.attributes.hasOwnProperty('url')) {
             var renderedTemplate = this.thumbnailTemplate(this.model.attributes);
           this.$el.html(renderedTemplate);
+
         }
         
     },
@@ -65,7 +66,8 @@ var DetailView = Backbone.View.extend({
     render: function(){
         var renderedTemplate = this.detailTemplate(this.model.attributes);
         this.$el.html(renderedTemplate).removeClass('thumbnail');
-    },
+    }
+    
 });
 
 var AppView = Backbone.View.extend({

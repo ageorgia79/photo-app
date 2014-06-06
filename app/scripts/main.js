@@ -42,7 +42,7 @@ var ThumbnailView = Backbone.View.extend({
  
     showDetailView: function(){
         var detail = new DetailView({model: this.model});
-          $('.galleryContainer').remove();
+          $('.galleryContainer').append(this.el);
           detail.render()
     } 
 
@@ -56,8 +56,10 @@ var DetailView = Backbone.View.extend({
     detailTemplate: _.template($('.detail-template').text()),
  
     initialize: function(){
+        $('.selectedContainer').empty();
         $('.selectedContainer').append(this.el);
         this.render();
+        
     },
  
     render: function(){
@@ -71,6 +73,7 @@ var AppView = Backbone.View.extend({
     initialize: function(){
         this.listenTo(coolPhotos, 'add', function(photo){
             new ThumbnailView({model: photo});
+            new DetailView({model: coolPhotos.first()});
         });
     }
 });

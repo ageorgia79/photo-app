@@ -66,6 +66,7 @@ var DetailView = Backbone.View.extend({
     render: function(){
         var renderedTemplate = this.detailTemplate(this.model.attributes);
         this.$el.html(renderedTemplate).removeClass('thumbnail');
+
     }
     
 });

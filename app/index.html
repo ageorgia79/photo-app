@@ -24,29 +24,23 @@
  <!--HTML DIV TAGS HERE//////////////////////////////////////////////////////////////////////////////////////////////////-->   
 
         <div class="header">Andy's Image Gallery
-            <nav>
-                <ul>
-                    <li><a href="/#images">Images List</a></li>
-                    <ul>
-                        <li><a href="/#images/jpg">JPG</a></li>
-                        <li><a href="/#images/gif">GIF</a></li>
-                    </ul>
-                        <li><a href="/#">Home</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="/#">Home</a></li>
+            </ul>
         </div>
-        <div class="routercontainer"></div>
         <div class="selectedContainer"></div>
         <div class="container">
             <div class="galleryContainer"></div>
         </div>
+
+        
 
 
  <!--SCRIPT TAGS HERE///////////////////////////////////////////////////////////////////////////////////////////////////-->  
 
  <!--<a href="/#photos/<%= _id %>"></a>  This needed to make the images "links" goes before <img src>-->
         <script type="text/template" class="thumbnail-template">
-            <img src="<%= url %>" width="200" height="200"/>
+            <a href="/#photos/<%= _id %>"><img src="<%= url %>" width="200" height="200"/></a>
         </script>
 
         <script type="text/template" class="detail-template">

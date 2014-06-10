@@ -83,45 +83,21 @@ var AppView = Backbone.View.extend({
     }
 });
 
-var AppRouter = Backbone.Router.extend({
-
-    //dont forget to create the script tag that turns the images to links//
+var appRouter = Backbone.Router.extend({
 
     routes: {
-
-        " " : "renderHome",
-        "images" : "renderImages",
-        "images/:format" : "renderImage",
-        "images/:format/size" : "renderImageSize",
-        
+        'photos/:id' : 'renderDetail',
+        'new' : 'renderNew',
     },
 
     initialize: function(){
-        console.log('AppRouter initialized')
-
-        //do a fetch inside of the initialize on routers
+        console.log('The router has started');
     },
 
-    renderHome: function(){
-        $('.routercontainer').html('You are Home.');
-    },
-
-    renderImages: function(){
-        console.log('is this working')
-        $('.routercontainer').html('Images List Wow');
-
-    },
-
-    renderImage: function(format){
-        console.log('profile route for', format)
-        $('.routercontainer').html('Check out ' + format + 'cool profile');
-        $('.routercontainer').append('<a href="/#images/'+format + '/size">'+ format + '/size </a>')
-    },
-
-    renderImageSize: function(format){
-        console.log('favorite route for', format)
-        $('.routercontainer').html('Check out '+ format + '/size');
-    },
+    renderDetail: function(id){
+        var modelPhoto = coolPhotos.get(id);
+        var detailInstance = new DetailView({model: modelPhoto});
+    }, 
 })
 
 var coolPhotos = new PhotoCollection();
@@ -130,9 +106,11 @@ var app = new AppView();
 
 coolPhotos.fetch();
 
-var router = new AppRouter();
+var router = new appRouter();
 
 Backbone.history.start();
+        
+
 
 
 

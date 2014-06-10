@@ -15,7 +15,7 @@ var PhotoCollection = Backbone.Collection.extend({
 });
 
 
-////////////////THUMBNAIL VIEW BEGIN
+////////////////THUMBNAIL VIEW BEGIN///////////////////////////////////////
 
 var ThumbnailView = Backbone.View.extend({
  
@@ -95,11 +95,11 @@ var AppRouter = Backbone.Router.extend({
     },
 
     initialize: function(){
-        console.log('AppRouter was just created')
+        console.log('AppRouter initialized')
     },
 
     renderHome: function(){
-        $('.routercontainer').html('Boring home page.');
+        $('.routercontainer').html('You are Home.');
     },
 
     renderImages: function(){

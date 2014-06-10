@@ -83,11 +83,17 @@ var AppView = Backbone.View.extend({
     }
 });
 
+
+
+
+
 var coolPhotos = new PhotoCollection();
 
 var app = new AppView();
 
 coolPhotos.fetch();
+
+
 
 
 

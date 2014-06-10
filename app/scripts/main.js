@@ -4,7 +4,7 @@ var Photo = Backbone.Model.extend({
     idAttribute: '_id',
 
     defaults: {
-      comments: 'Awesome!!',
+      caption: 'Awesome!!',
         url: 'http://37.media.tumblr.com/tumblr_mdgfpehkYN1r8cvzdo1_500.gif'
     },
 });
@@ -65,7 +65,7 @@ var DetailView = Backbone.View.extend({
  
     render: function(){
         var renderedTemplate = this.detailTemplate(this.model.attributes);
-        this.$el.html(renderedTemplate);
+        this.$el.html(renderedTemplate).hide().fadeIn(1000);
         
 
     }
@@ -85,6 +85,8 @@ var AppView = Backbone.View.extend({
 
 var AppRouter = Backbone.Router.extend({
 
+    //dont forget to create the script tag that turns the images to links//
+
     routes: {
 
         " " : "renderHome",
@@ -96,6 +98,8 @@ var AppRouter = Backbone.Router.extend({
 
     initialize: function(){
         console.log('AppRouter initialized')
+
+        //do a fetch inside of the initialize on routers
     },
 
     renderHome: function(){
@@ -103,7 +107,9 @@ var AppRouter = Backbone.Router.extend({
     },
 
     renderImages: function(){
+        console.log('is this working')
         $('.routercontainer').html('Images List Wow');
+
     },
 
     renderImage: function(format){
@@ -118,17 +124,17 @@ var AppRouter = Backbone.Router.extend({
     },
 })
 
-var router = new AppRouter();
-
-Backbone.history.start();
-
-
-
 var coolPhotos = new PhotoCollection();
 
 var app = new AppView();
 
 coolPhotos.fetch();
+
+var router = new AppRouter();
+
+Backbone.history.start();
+
+
 
 
 

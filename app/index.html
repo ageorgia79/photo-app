@@ -44,6 +44,7 @@
 
  <!--SCRIPT TAGS HERE///////////////////////////////////////////////////////////////////////////////////////////////////-->  
 
+ <!--<a href="/#photos/<%= _id %>"></a>  This needed to make the images "links" goes before <img src>-->
         <script type="text/template" class="thumbnail-template">
             <img src="<%= url %>" width="200" height="200"/>
         </script>
@@ -53,7 +54,7 @@
             <BR>
             <div class="comment-box-field">
                 <label for="text2">
-                    <input value="<%= comments %>" class="captioninput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                    <input value="<%= caption %>" class="captioninput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
                 </label>
                 
             </div>

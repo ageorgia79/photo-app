@@ -63,9 +63,20 @@ body {
 	padding-bottom: 35px;
 	margin: 0 auto;
 	position: fixed;
-	width: 100%;
+	width: 99%;
+	height: 70px;
 	background-color: black;
 	color: #79793D;
+}
+
+.header li {
+	font-size: 20px;
+	display: block;
+	position: relative;
+	bottom: 80px;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 label {

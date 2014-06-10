@@ -83,7 +83,40 @@ var AppView = Backbone.View.extend({
     }
 });
 
+var AppRouter = Backbone.Router.extend({
 
+    routes: {
+
+        " " : "renderHome",
+        "images" : "renderImages",
+        "images/:format" : "renderImage",
+        "images/:format/size" : "renderImageSize",
+        
+    },
+
+    initialize: function(){
+        console.log('AppRouter was just created')
+    },
+
+    renderHome: function(){
+        $('.routercontainer').html('Boring home page.');
+    },
+
+    renderImages: function(){
+        $('.routercontainer').html('Images List Wow');
+    },
+
+    renderImage: function(format){
+        console.log('profile route for', format)
+        $('.routercontainer').html('Check out ' + format + 'cool profile');
+        $('.routercontainer').append('<a href="/#images/'+format + '/size">'+ format + '/size </a>')
+    },
+
+    renderImageSize: function(format){
+        console.log('favorite route for', format)
+        $('.routercontainer').html('Check out '+ format + '/size');
+    }
+})
 
 
 

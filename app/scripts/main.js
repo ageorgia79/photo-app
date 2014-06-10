@@ -115,8 +115,12 @@ var AppRouter = Backbone.Router.extend({
     renderImageSize: function(format){
         console.log('favorite route for', format)
         $('.routercontainer').html('Check out '+ format + '/size');
-    }
+    },
 })
+
+var router = new AppRouter();
+
+Backbone.history.start();
 
 
 

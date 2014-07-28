@@ -1,0 +1,22 @@
+<!DOCTYPE html><html class=no-js><head><meta charset=utf-8><title>photo gallery</title><meta name=description content=""><meta name=viewport content="width=device-width"><link rel="shortcut icon" href=/6df2b309.favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/3fbc5e7f.main.css><body><!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--><!--HTML DIV TAGS HERE//////////////////////////////////////////////////////////////////////////////////////////////////--><div class=header>Andy's Image Gallery<ul><li><a href=/#>Home</a></li></ul></div><div class=selectedContainer></div><div class=container><div class=galleryContainer></div></div><!--SCRIPT TAGS HERE///////////////////////////////////////////////////////////////////////////////////////////////////--><!--<a href="/#photos/<%= _id %>"></a>  This needed to make the images "links" goes before <img src>--><script type=text/template class=thumbnail-template><a href="/#photos/<%= _id %>"><img src="<%= url %>" width="200" height="200"/></a></script><script type=text/template class=detail-template><img src="<%= url %>" width="400" height="400"/>
+            <BR>
+            <div class="comment-box-field">
+                <label for="text2">
+                    <input value="<%= caption %>" class="captioninput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                </label>
+                
+            </div>
+            <BR>
+            <div class="comment-box-field">
+                <label for="text2">
+                    <input value="<%= url %>" class="urlInput" type="text" maxlength="380" name="commentbox" placeholder="Comment Here" id="commentbox"/>
+                </label>
+               
+            </div></script><script src=scripts/e0c99382.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/0975cf83.main.js></script>
